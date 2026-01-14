@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON DEFENDER - 3D Space Shooter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- HUD -->
+        <div id="hud">
+            <div class="hud-item">
+                <span class="hud-label">SCORE</span>
+                <span id="score" class="hud-value">0</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">HEALTH</span>
+                <div id="health-bar">
+                    <div id="health-fill"></div>
+                </div>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">LEVEL</span>
+                <span id="level" class="hud-value">1</span>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay">
+            <div class="menu-content">
+                <h1 class="game-title">NEON DEFENDER</h1>
+                <p class="game-subtitle">Protect the galaxy from invaders</p>
+                <div class="controls-info">
+                    <p><strong>WASD</strong> - Move</p>
+                    <p><strong>MOUSE</strong> - Aim</p>
+                    <p><strong>CLICK</strong> - Shoot</p>
+                    <p><strong>SPACE</strong> - Special Attack</p>
+                </div>
+                <button id="start-btn" class="game-btn">START GAME</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="menu-content">
+                <h1 class="game-title game-over">GAME OVER</h1>
+                <p class="final-score">Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn" class="game-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
